@@ -50,13 +50,14 @@ Add this to your `configuration.yaml`:
 ```yaml
 tts:
   - platform: ttm
+    name: Text-to-Morse
     wpm: 18        # Optional, default 18
     frequency: 700 # Hz, optional
     volume: 1.0    # 0.0–1.0, optional
 ```
 
 Restart Home Assistant.  
-Now you will see **Morse (ttm)** in the **TTS** dropdown of the media player’s more-info panel.
+Now you will see **Text-to-Morse (ttm)** in the **TTS** dropdown of the media player’s more-info panel.
 
 ---
 
@@ -125,24 +126,6 @@ mode: single
 
 ---
 
-## Troubleshooting
-
-### No sound
-- Check if your media player supports WAV. If not, you may need to modify the code to export MP3 (requires `ffmpeg`).
-- Ensure `/config/www/ttm` exists (created automatically on first run for service mode).
-- Check **Settings → System → Logs** for any `ttm` errors.
-
-### TTS option not appearing
-- Ensure you added the `tts:` config block in `configuration.yaml`.
-- Restart Home Assistant.
-- If installed via HACS, verify the integration is enabled and not disabled.
-
-### Audio plays but is silent
-- Ensure `volume` is > 0.
-- Check `wpm` — very high WPM values make tones very short and possibly inaudible.
-
----
-
 ## Advanced Customization
 You can fork this repo and:
 - Change the default tone frequency.
@@ -152,20 +135,6 @@ You can fork this repo and:
 
 ---
 
-## File Structure
-```
-custom_components/ttm/
-  __init__.py       # Service: ttm.play
-  manifest.json     # Integration metadata
-  morse.py          # Morse code mapping and converter
-  services.yaml     # Service field definitions for HA UI
-  tts.py            # TTS provider for HA's built-in TTS system
-hacs.json           # HACS metadata
-README.md           # This file
-LICENSE
-```
-
----
 
 ## Developer Notes
 

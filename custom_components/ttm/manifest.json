@@ -1,15 +1,15 @@
 {
   "domain": "ttm",
   "name": "Text to Morse",
-  "documentation": "https://github.com/yourname/ttm",
-  "issue_tracker": "https://github.com/yourname/ttm/issues",
+  "documentation": "https://github.com/crom1e/ttm",
+  "issue_tracker": "https://github.com/crom1e/ttm/issues",
   "codeowners": [
-    "@yourname"
+    "@crom1e"
   ],
   "requirements": [
     "pydub>=0.25.1"
   ],
-  "version": "1.1.0",
+  "version": "0.9.0",
   "iot_class": "local_push",
   "after_dependencies": [
     "tts"
