@@ -28,7 +28,7 @@ This integration works in **two ways**:
 
 ### Option 1 — HACS (Recommended)
 1. Go to **HACS → Integrations → Menu (⋮) → Custom repositories**.
-2. Add your GitHub repository URL.
+2. Add https://github.com/crom1e/ttm as the repo.
 3. Select category **Integration**.
 4. Install **Text to Morse (ttm)**.
 5. Restart Home Assistant.
