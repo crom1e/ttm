@@ -1,0 +1,47 @@
+play:
+  name: Play text as Morse
+  description: Convert text to Morse code and play as audio on a media player.
+  fields:
+    text:
+      name: Text
+      description: The text to convert to Morse.
+      required: true
+      selector:
+        text: {}
+    entity_id:
+      name: Media player
+      description: Target media_player entity_id to play the generated audio.
+      required: true
+      selector:
+        entity:
+          domain: media_player
+    wpm:
+      name: Words per minute
+      description: Transmission speed (default 18 WPM).
+      required: false
+      selector:
+        number:
+          min: 5
+          max: 40
+          step: 1
+          mode: box
+    frequency:
+      name: Tone frequency
+      description: Frequency in Hz (default 700).
+      required: false
+      selector:
+        number:
+          min: 300
+          max: 1200
+          step: 10
+          mode: box
+    volume:
+      name: Volume
+      description: Output volume, 0.0–1.0 (default 1.0).
+      required: false
+      selector:
+        number:
+          min: 0
+          max: 1
+          step: 0.05
+          mode: slider
